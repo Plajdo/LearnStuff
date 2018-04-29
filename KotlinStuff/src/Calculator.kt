@@ -19,16 +19,13 @@ fun main(args : Array<String>){
 		}
 		
 		var instance: TableGUI = TableGUI()
-		
+		instance.initialize()
+				
 	})
 	
 }
 
 class TableGUI{
-	constructor(){
-		initialize()
-		
-	}
 	
 	fun initialize(){
 		var frmExcelStuff: JFrame = JFrame()
