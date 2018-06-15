@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9354c47e-6604-40b1-a1d2-9a8389acac00" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLI-Graphics/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/CLI-Graphics/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLI-Graphics/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/CLI-Graphics/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLI-Graphics/.project" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/CLI-Graphics/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLI-Graphics/CLI-Graphics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/CLI-Graphics/CLI-Graphics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLI-Graphics/src/es/esy/playdotv/cligraphics/Controls.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/CLI-Graphics/src/es/esy/playdotv/cligraphics/Controls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLI-Graphics/src/es/esy/playdotv/cligraphics/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/CLI-Graphics/src/es/esy/playdotv/cligraphics/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Standalone-test/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/Standalone-test/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Standalone-test/.project" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/Standalone-test/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Standalone-test/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/Standalone-test/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Standalone-test/Standalone-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/Standalone-test/Standalone-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Standalone-test/src/es/esy/playdotv/RunThis.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/Standalone-test/src/es/esy/playdotv/RunThis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Standalone-test/src/es/esy/playdotv/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainModule/Standalone-test/src/es/esy/playdotv/Tests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +38,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -35,11 +48,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LearnStuff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MainModule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnStuff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MainModule" type="462c0819:PsiDirectoryNode" />
+              <item name="KotlinLanterna" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnStuff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GIT\LearnStuff\MainModule" />
+      <recent name="D:\GIT\LearnStuff\CLI-Graphics" />
+      <recent name="D:\GIT\LearnStuff\MainModule\Standalone-test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -142,7 +184,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -151,8 +193,8 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32918397" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -161,8 +203,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" />
@@ -176,14 +218,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CLI-Graphics/src/es/esy/playdotv/cligraphics/TestClass.java">
+    <entry file="file://$PROJECT_DIR$/MainModule/CLI-Graphics/src/es/esy/playdotv/cligraphics/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Standalone-test/src/es/esy/playdotv/RunThis.java">
+    <entry file="file://$PROJECT_DIR$/MainModule/Standalone-test/src/es/esy/playdotv/RunThis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
