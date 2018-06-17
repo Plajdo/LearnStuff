@@ -37,6 +37,9 @@ public class User{
 	private static Socket socket;
 	
 	public static void main(String[] args) throws IOException{
+		
+		new Server();
+		
 		terminal = new DefaultTerminalFactory().createTerminal();
 		screen = new TerminalScreen(terminal);
 		screen.startScreen();
@@ -82,24 +85,27 @@ public class User{
 		loginWindow.close();
 		
 		try{
-			socket = IO.socket("http://127.0.0.1/");
+			socket = IO.socket("localhost:4000");
 		}catch(URISyntaxException e){
 			System.err.println(e.getMessage());
 		}
+		
+		
 		socket.on(Socket.EVENT_CONNECT, new Emitter.Listener(){
 			@Override
 			public void call(Object... objects){
-				socket.send("connected");
+				System.out.println("Client: Connected");
 				gui.addWindowAndWait(chatWindow);
 			}
 		}).on(Socket.EVENT_MESSAGE, new Emitter.Listener(){
 			@Override
 			public void call(Object... objects){
-				System.out.println(objects[0]);
+				System.out.println("Client: " + objects[0]);
 			}
 		});
 		
 		socket.connect();
+		socket.send("hyyyeeeyyey");
 		
 	}
 	
