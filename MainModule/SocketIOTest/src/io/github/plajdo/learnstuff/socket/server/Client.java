@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.Objects;
 
 class Client{
 	
@@ -14,14 +13,10 @@ class Client{
 	private Socket clientSocket;
 	private String nickname;
 	
-	Client(Socket s){
+	Client(Socket s) throws IOException{
 		clientSocket = s;
-		try{
-			out = new PrintWriter(clientSocket.getOutputStream(), true);
-			in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-		}catch(IOException e){
-			System.out.println(e.getMessage());
-		}
+		out = new PrintWriter(clientSocket.getOutputStream(), true);
+		in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 		
 	}
 	
@@ -66,5 +61,7 @@ class Client{
 		return this;
 		
 	}
+	
+	
 	
 }

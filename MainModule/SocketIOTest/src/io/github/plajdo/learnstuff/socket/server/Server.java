@@ -13,8 +13,9 @@ public class Server{
 	public static void main(String[] args){
 		try{
 			serverSocket = new ServerSocket(4000);
+			System.out.println("Server running on port " + serverSocket.getLocalPort() + ".\n");
 		}catch(IOException e){
-			System.out.println(e.getMessage());
+			System.err.println(e.getMessage());
 		}
 		
 		do{
@@ -31,7 +32,7 @@ public class Server{
 				}).start();
 				
 			}catch(IOException e){
-				System.out.println(e.getMessage());
+				System.err.println(e.getMessage());
 			}
 			
 		}while(!allClients.isEmpty());
