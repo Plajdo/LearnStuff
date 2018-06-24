@@ -1,4 +1,4 @@
-package io.github.plajdo.learnstuff.socketio;
+package io.github.plajdo.learnstuff.socket.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
