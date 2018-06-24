@@ -15,14 +15,30 @@ public class User{
 			BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in))){
 			
 			String userInput;
-			System.out.println("Server: " + in.readLine());
+			
+			/*
+			 * Get nickname message
+			 */
+			System.out.print(in.readLine());
+			
+			Thread serverWriter = new Thread(() -> {
+				String serverText;
+				try{
+					while((serverText = in.readLine())!= null){
+						System.out.println(serverText);
+					}
+				}catch(IOException e){
+					System.out.println(e.getMessage());
+				}
+			});
+			serverWriter.setDaemon(true);
+			serverWriter.start();
 			
 			while((userInput = stdIn.readLine()) != null){
 				out.println(userInput);
 				if(userInput.equals("kys")){
-					break;
+					System.exit(0);
 				}
-				System.out.println("Server: " + in.readLine());
 				
 			}
 			
