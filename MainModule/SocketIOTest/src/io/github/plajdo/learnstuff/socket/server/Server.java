@@ -1,6 +1,7 @@
 package io.github.plajdo.learnstuff.socket.server;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class Server{
 	
 	public static void main(String[] args){
 		try{
-			serverSocket = new ServerSocket(4000);
+			serverSocket = new ServerSocket(4000, 9, InetAddress.getByName("192.168.100.166"));
 			System.out.println("Server running on port " + serverSocket.getLocalPort() + ".\n");
 		}catch(IOException e){
 			System.err.println(e.getMessage());

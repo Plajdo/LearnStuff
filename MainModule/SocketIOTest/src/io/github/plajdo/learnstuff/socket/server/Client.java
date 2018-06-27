@@ -33,10 +33,10 @@ class Client{
 		try{
 			String inputLine;
 			
-			send("Nickname: ");
+			send("well");
 			nickname = in.readLine();
-			send("Hello, " + (nickname.isEmpty() ? getName() : nickname) + "!");
-			send("Use \"kys\" to exit.");
+			//send("Hello, " + (nickname.isEmpty() ? getName() : nickname) + "!");
+			//send("Use \"kys\" to exit.");
 			
 			while((inputLine = in.readLine()) != null){
 				System.out.println(this.getName() + ": " + inputLine);
