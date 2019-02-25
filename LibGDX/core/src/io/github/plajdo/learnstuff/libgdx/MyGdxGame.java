@@ -18,7 +18,8 @@ public class MyGdxGame extends ApplicationAdapter {
 	
 	CameraInputController inputController;
 	Environment environment;
-	Camera camera;
+	DirectionalLight light;
+	static Camera camera;
 	ModelBatch modelBatch;
 	
 	ArrayList<Block> blockStorage = new ArrayList<Block>();
@@ -27,10 +28,6 @@ public class MyGdxGame extends ApplicationAdapter {
 	public void create () {
 		modelBatch = new ModelBatch();
 		
-		environment = new Environment();
-		environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1.0f));
-		environment.add(new DirectionalLight().set(1.0f, 1.0f, 1.0f, -1.0f, -0.8f, -0.2f));
-		
 		camera = new PerspectiveCamera(70, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		camera.position.set(4, 4, 4);
 		camera.lookAt(0, 0, 0);
@@ -38,14 +35,25 @@ public class MyGdxGame extends ApplicationAdapter {
 		camera.far = 50.0f;
 		camera.update();
 		
-		for(int i = 0; i < 5; i++){
-			for(int j = 0; j < 5; j++){
-				blockStorage.add(new Block(new Vector3(i, 0, j)));
+		//Move the light up a bit
+		light = new DirectionalLight().set(1.0f, 1.0f, 1.0f, camera.direction.x, camera.direction.y - 1.0f, camera.direction.z);
+		
+		environment = new Environment();
+		environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1.0f));
+		environment.add(light);
+		
+		for(int i = -1; i <= 1; i++){
+			for(int j = -1; j <= 1; j++){
+				for(int k = -1; k <= 1; k++){
+					blockStorage.add(new Block(new Vector3(i, k, j), Block.Colours.getRandomColour()));
+					
+				}
 				
 			}
 			
 		}
 		
+		//TODO: input controller?
 		inputController = new CameraInputController(camera);
 		Gdx.input.setInputProcessor(inputController);
 		
@@ -58,6 +66,9 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+		
+		//Move the light up a bit
+		light.setDirection(camera.direction.x, camera.direction.y - 1.0f, camera.direction.z);
 		
 		modelBatch.begin(camera);
 		for(int i = 0; i < blockStorage.size(); i++){
