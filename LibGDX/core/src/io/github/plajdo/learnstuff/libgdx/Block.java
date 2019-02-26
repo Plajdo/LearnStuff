@@ -1,17 +1,13 @@
 package io.github.plajdo.learnstuff.libgdx;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.VertexAttributes;
 import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
-import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Vector3;
-import com.sun.org.apache.regexp.internal.RE;
 
 class Block{
 	
@@ -67,52 +63,18 @@ class Block{
 		
 	}
 	
-	Block(Vector3 pos) {
-		this(pos, Colours.RED);
-		
-	}
-	
-	Block(Vector3 pos, Colours blockColour) {
+	Block(Vector3 pos, Colours... blockColours) {
 		blockPosition = pos;
-		setCubeColour(blockColour);
+		
+		setCubeColour(blockColours);
 		replaceInstance();
 		
 	}
 	
-	public void setCubeColour(Colours toColour) {
-		switch(toColour) {
-			case RED:{
-				model = modelBuilder.createBox(1.0f, 1.0f, 1.0f, new Material(ColorAttribute.createDiffuse(Color.RED)), VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal);
-				break;
-				
-			}
-			case GREEN:{
-				model = modelBuilder.createBox(1.0f, 1.0f, 1.0f, new Material(ColorAttribute.createDiffuse(Color.GREEN)), VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal);
-				break;
-				
-			}
-			case BLUE:{
-				model = modelBuilder.createBox(1.0f, 1.0f, 1.0f, new Material(ColorAttribute.createDiffuse(Color.BLUE)), VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal);
-				break;
-				
-			}
-			case ORANGE:{
-				model = modelBuilder.createBox(1.0f, 1.0f, 1.0f, new Material(ColorAttribute.createDiffuse(Color.ORANGE)), VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal);
-				break;
-				
-			}
-			case YELLOW:{
-				model = modelBuilder.createBox(1.0f, 1.0f, 1.0f, new Material(ColorAttribute.createDiffuse(Color.YELLOW)), VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal);
-				break;
-				
-			}
-			case WHITE:{
-				model = modelBuilder.createBox(1.0f, 1.0f, 1.0f, new Material(ColorAttribute.createDiffuse(Color.WHITE)), VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal);
-				break;
-				
-			}
-			
-		}
+	public void setCubeColour(Colours... toColours) {
+		model = modelBuilder.createBox(1.0f, 1.0f, 1.0f, new Material(ColorAttribute.createDiffuse(Color.WHITE)), VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal);
+		
+		
 		replaceInstance();
 		
 	}
